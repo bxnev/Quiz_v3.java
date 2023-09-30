@@ -5,7 +5,14 @@ import java.time.Period;
 
 
 public class Person {
+
+    private String firstName;
+    private String surname;
+
     public Person(String firstName, String surname) {
+        this.firstName = firstName;
+        this.surname = surname;
+
     }
 
     public void setDateOfBirth(String dateOfBirth) throws Exception {
@@ -20,6 +27,8 @@ public class Person {
                 throw new Exception("Date of birth supplied in wrong format.");
 
             }
+        } else {
+            this.dateOfBirth = LocalDate.now();
         }
     }
 
@@ -29,10 +38,28 @@ public class Person {
         return difference.getYears();
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
     Address address;
     LocalDate dateOfBirth;
 
-    public void setAddress(int i, String glebe_street, String auchenshoogle, String perthshire, String s) {
+
+    public void setAddress(int i, String glebeStreet, String auchenshoogle, String perthshire, String s) {
+        address = new Address(i, glebeStreet, auchenshoogle, perthshire, s);
     }
 }
 

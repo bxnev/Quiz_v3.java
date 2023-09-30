@@ -3,11 +3,11 @@ package ab.scotland.quiz;
 //Aleksandar Bonev
 //Scotland CSV quiz
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Collections;
-
 import ab.useful.FileAccess;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 
 public class Quiz {
@@ -91,7 +91,7 @@ public class Quiz {
         }
 
 
-}
+    }
 
 
     public Quiz(String filePath) {

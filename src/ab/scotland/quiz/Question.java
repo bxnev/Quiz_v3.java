@@ -1,6 +1,6 @@
 package ab.scotland.quiz;
 
-public class Question {
+public abstract class Question {
 
     private String question;
     private String answer;

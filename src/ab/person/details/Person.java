@@ -6,8 +6,13 @@ import java.time.Period;
 
 public class Person {
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     private String firstName;
     private String surname;
+    private int attempts = 0;
 
     public Person(String firstName, String surname) {
         this.firstName = firstName;
@@ -52,6 +57,14 @@ public class Person {
 
     public Address getAddress() {
         return address;
+    }
+
+    public int getAttempts() {
+        return attempts;
+    }
+
+    public void incAttempts() {
+        attempts++;
     }
 
     Address address;

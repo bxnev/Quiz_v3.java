@@ -50,7 +50,7 @@ public class MultipleChoiceQuestion extends Question {
     public boolean isCorrect(String userSays) {
         boolean isCorrect = false;
         try {
-            //change user answer to int and subtract 1 as index starts at zero.
+            // change user answer to int and subtract 1 as index starts at zero.
             int userIndex = Integer.parseInt(userSays) - 1;
             if (correctIndex == userIndex)
                 isCorrect = true;

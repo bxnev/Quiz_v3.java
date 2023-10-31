@@ -4,6 +4,11 @@ import ab.person.details.Person;
 
 import java.util.Stack;
 
+/**
+ * Player class;  takes player's name and their score
+ *
+ */
+
 public class Player extends Person {
 
     private Stack<Integer> previousScores = new Stack<>();
@@ -13,14 +18,16 @@ public class Player extends Person {
         super(firstName, surname);
     }
 
+    public Stack<Integer> getPreviousScores() {
+        return previousScores;
+    }
+
+    public void setPreviousScores(Stack<Integer> previousScores) {
+        this.previousScores = previousScores;
+    }
+
     public Player(String firstName, String surname, String scores) {
         this(firstName, surname);
-
-        //previousScores with expected values in tests
-        previousScores.push(52);
-        previousScores.push(23);
-        previousScores.push(33);
-        previousScores.push(19);
 
         // Split the string by commas, parse to Integers and add to stack
         String[] csvScores = scores.split(",");
@@ -69,8 +76,6 @@ public class Player extends Person {
         return "Player: " + getFirstName() + " " + getSurname() +
                 " previousScores=" + previousScores.toString();
     }
-
-
 
 
     public void recordScore(int score) {
